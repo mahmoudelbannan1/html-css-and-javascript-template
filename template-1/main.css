@@ -1,0 +1,53 @@
+.container {
+  width: 800px;
+}
+
+.myDiv {
+  margin: 30px auto;
+
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  position: relative;
+  animation-name: animationSpin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: all 3s;
+}
+
+.myDiv:hover {
+  animation-play-state: paused;
+  width: 100px;
+  height: 100px;
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
+@keyframes animationSpin {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    background-color: blue;
+    left: 300px;
+    top: 0;
+  }
+  50% {
+    background-color: yellow;
+    left: 300px;
+    top: 300px;
+  }
+  75% {
+    background-color: red;
+    left: 0;
+    top: 300px;
+  }
+  100% {
+    background-color: green;
+    left: 0;
+    top: 0;
+  }
+}
